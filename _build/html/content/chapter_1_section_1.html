@@ -1,0 +1,1452 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.1. The Elements of Programming &#8212; Structure and Interpretation of Computer Programs</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.2. Procedures and the Processes They Generate" href="chapter_1_section_2.html" />
+    <link rel="prev" title="1. Building Abstractions with Procedures" href="chapter_1_intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Structure and Interpretation of Computer Programs</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="_preamble_01_title.html">
+   Structure and Interpretation
+   <br/>
+   of Computer Programs
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="_preamble_02_license.html">
+   License
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="_preamble_03_ordering.html">
+   Ordering Information
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="_preamble_04_dedication.html">
+   Dedication
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="_preamble_05_foreword.html">
+   Foreword
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="_preamble_06_preface_second.html">
+   Preface to the Second Edition
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="_preamble_07_preface_first.html">
+   Preface to the First Edition
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="_preamble_08_acknowledgments.html">
+   Acknowledgments
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Book
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="chapter_1_intro.html">
+   1. Building Abstractions with Procedures
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.1. The Elements of Programming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_1_section_2.html">
+     1.2. Procedures and the Processes They Generate
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_1_section_3.html">
+     1.3. Formulating Abstractions with Higher-Order Procedures
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter_2_intro.html">
+   2. Building Abstractions with Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_2_section_1.html">
+     2.1. Introduction to Data Abstraction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_2_section_2.html">
+     2.2. Hierarchical Data and the Closure Property
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_2_section_3.html">
+     2.3. Symbolic Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_2_section_4.html">
+     2.4. Multiple Representations for Abstract Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_2_section_5.html">
+     2.5. Systems with Generic Operations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter_3_intro.html">
+   3. Modularity, Objects, and State
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_3_section_1.html">
+     3.1. Assignment and Local State
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_3_section_2.html">
+     3.2. The Environment Model of Evaluation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_3_section_3.html">
+     3.3. Modeling with Mutable Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_3_section_4.html">
+     3.4. Concurrency: Time Is of the Essence
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_3_section_5.html">
+     3.5. Streams
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter_4_intro.html">
+   4. Metalinguistic Abstraction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_4_section_1.html">
+     4.1. The Metacircular Evaluator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_4_section_2.html">
+     4.2. Variations on a Scheme – Lazy Evaluation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_4_section_3.html">
+     4.3. Variations on a Scheme – Nondeterministic Computing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_4_section_4.html">
+     4.4. Logic Programming
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter_5_intro.html">
+   5. Computing with Register Machines
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_5_section_1.html">
+     5.1. Designing Register Machines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_5_section_2.html">
+     5.2. A Register-Machine Simulator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_5_section_3.html">
+     5.3. Storage Allocation and Garbage Collection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_5_section_4.html">
+     5.4. The Explicit-Control Evaluator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter_5_section_5.html">
+     5.5. Compilation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Postamble
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="postamble_01_references.html">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="postamble_02_exercises.html">
+   Exercises
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="postamble_03_index.html">
+   Index
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/chapter_1_section_1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ianmcloughlin/sicp"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ianmcloughlin/sicp/issues/new?title=Issue%20on%20page%20%2Fcontent/chapter_1_section_1.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#expressions">
+   1.1.1. Expressions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#naming-and-the-environment">
+   1.1.2. Naming and the Environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evaluating-combinations">
+   1.1.3. Evaluating Combinations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compound-procedures">
+   1.1.4. Compound Procedures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-substitution-model-for-procedure-application">
+   1.1.5. The Substitution Model for Procedure Application
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applicative-order-versus-normal-order">
+     Applicative order versus normal order
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditional-expressions-and-predicates">
+   1.1.6. Conditional Expressions and Predicates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-square-roots-by-newton-s-method-a-h3">
+   1.1.7. Example: Square Roots by Newton’s Method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#procedures-as-black-box-abstractions">
+   1.1.8. Procedures as Black-Box Abstractions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#local-names">
+     Local names
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#internal-definitions-and-block-structure">
+     Internal definitions and block structure
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-elements-of-programming">
+<span id="section-1-1"></span><h1><span class="section-number">1.1. </span>The Elements of Programming<a class="headerlink" href="#the-elements-of-programming" title="Permalink to this headline">¶</a></h1>
+<p><a name="index_term_0118"></a></p>
+<p>A powerful programming language is more than just a means for instructing a computer to perform tasks.
+The language also serves as a framework within which we organize our ideas about processes.
+Thus, when we describe a language, we should pay particular attention to the means that the language provides for combining simple ideas to form more complex ideas.
+Every powerful language has three mechanisms for accomplishing this:</p>
+<ul class="simple">
+<li><p><a name="index_term_0120"></a><strong>primitive expressions</strong></strong>**, which represent the simplest entities the language is concerned with,<a name="index_term_0122"></a><a name="index_term_0124"></a></p></li>
+<li><p><strong>means of combination</strong>, by which compound elements are built from simpler ones, and <a name="index_term_0126"></a></p></li>
+<li><p><strong>means of abstraction</strong>, by which compound elements can be named and manipulated as units.</p></li>
+</ul>
+<p>In programming, we deal with two kinds of elements: <a name="index_term_0128"></a>procedures and <a name="index_term_0130"></a>data.
+(Later we will discover that they are really not so distinct.) Informally, data is “stuff” that we want to manipulate, and procedures are descriptions of the rules for manipulating the data.
+Thus, any powerful programming language should be able to describe primitive data and primitive procedures and should have methods for combining and abstracting procedures and data.</p>
+<p>In this chapter we will deal only with simple <a name="index_term_0132"></a><a name="index_term_0134"></a>numerical data so that we can focus on the rules for building procedures.
+<a class="footnote-reference brackets" href="#foot-1-1-4" id="id1">1</a>
+In later chapters we will see that these same rules allow us to build procedures to manipulate compound data as well.</p>
+<div class="section" id="expressions">
+<h2><span class="section-number">1.1.1. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h2>
+<p>One easy way to get started at programming is to examine some typical interactions with an interpreter for the Scheme dialect of Lisp.
+Imagine that you are sitting at a computer terminal.
+You type an <em>expression</em>, and the interpreter responds by displaying the result of its <em>evaluating</em> that expression.</p>
+<p><a name="index_term_0148"></a><a name="index_term_0150"></a>
+One kind of primitive expression you might type is a number.
+(More precisely, the expression that you type consists of the numerals that represent the number in base 10.)
+If you present Lisp with a number</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="mi">486</span>
+</pre></div>
+</div>
+<p>the interpreter will respond by printing<a class="footnote-reference brackets" href="#foot-1-1-5" id="id2">2</a></p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="mi">486</span>
+</pre></div>
+</div>
+<p><a name="index_term_0154"></a><a name="index_term_0156"></a>
+Expressions representing numbers may be combined with an <a name="index_term_0158"></a>expression representing a <a name="index_term_0160"></a><a name="index_term_0162"></a><a name="index_term_0164"></a><a name="index_term_0166"></a><a name="index_term_0168"></a>primitive procedure (such as <code class="docutils literal notranslate"><span class="pre">+</span></code> or <code class="docutils literal notranslate"><span class="pre">*</span></code>) to form a compound expression that represents the application of the procedure to those numbers.
+For example:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">+ </span><span class="mi">137</span> <span class="mi">349</span><span class="p">)</span>
+<span class="mi">486</span>
+
+<span class="p">(</span><span class="nb">- </span><span class="mi">1000</span> <span class="mi">334</span><span class="p">)</span>
+<span class="mi">666</span>
+
+<span class="p">(</span><span class="nb">* </span><span class="mi">5</span> <span class="mi">99</span><span class="p">)</span>
+<span class="mi">495</span>
+
+<span class="p">(</span><span class="nb">/ </span><span class="mi">10</span> <span class="mi">5</span><span class="p">)</span>
+<span class="mi">2</span>
+
+<span class="p">(</span><span class="nb">+ </span><span class="mf">2.7</span> <span class="mi">10</span><span class="p">)</span>
+<span class="mf">12.7</span>
+</pre></div>
+</div>
+<p>Expressions such as these, formed by <a name="index_term_0178"></a>delimiting a list of expressions within parentheses in order to denote <a name="index_term_0180"></a>procedure application, are called <em>combinations</em>.
+The leftmost element in the list is called the <a name="index_term_0182"></a><em>operator</em>, and the other elements are called <a name="index_term_0184"></a><em>operands</em>.
+The <a name="index_term_0186"></a>value of a combination is obtained by applying the procedure specified by the operator to the <a name="index_term_0188"></a><em>arguments</em> that are the values of the operands.</p>
+<p>The convention of placing the operator to the left of the operands is known as <a name="index_term_0190"></a><em>prefix notation</em>, and it may be somewhat confusing at first because it departs significantly from the customary mathematical convention.
+Prefix notation has several advantages, however.
+One of them is that it can accommodate <a name="index_term_0192"></a><a name="index_term_0194"></a>procedures that may take an arbitrary number of arguments, as in the following examples:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">+ </span><span class="mi">21</span> <span class="mi">35</span> <span class="mi">12</span> <span class="mi">7</span><span class="p">)</span>
+<span class="mi">75</span>
+
+<span class="p">(</span><span class="nb">* </span><span class="mi">25</span> <span class="mi">4</span> <span class="mi">12</span><span class="p">)</span>
+<span class="mi">1200</span>
+</pre></div>
+</div>
+<p>No ambiguity can arise, because the operator is always the leftmost element and the entire combination is delimited by the parentheses.</p>
+<p><a name="index_term_0196"></a>A second advantage of prefix notation is that it extends in a straightforward way to allow combinations to be <em>nested</em>, that is, to have combinations whose elements are themselves combinations:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">* </span><span class="mi">3</span> <span class="mi">5</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="mi">10</span> <span class="mi">6</span><span class="p">))</span>
+<span class="mi">19</span>
+</pre></div>
+</div>
+<p>There is no limit (in principle) to the depth of such nesting and to the overall complexity of the expressions that the Lisp interpreter can evaluate.
+It is we humans who get confused by still relatively simple expressions such as</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span> <span class="mi">3</span> <span class="p">(</span><span class="nb">+ </span><span class="p">(</span> <span class="mi">2</span> <span class="mi">4</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="mi">3</span> <span class="mi">5</span><span class="p">)))</span> <span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">- </span><span class="mi">10</span> <span class="mi">7</span><span class="p">)</span> <span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>which the interpreter would readily evaluate to be 57.
+We can help ourselves by writing such an expression in the form</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span> <span class="mi">3</span>
+      <span class="p">(</span><span class="nb">+ </span><span class="p">(</span> <span class="mi">2</span> <span class="mi">4</span><span class="p">)</span>
+         <span class="p">(</span><span class="nb">+ </span><span class="mi">3</span> <span class="mi">5</span><span class="p">)))</span>
+   <span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">- </span><span class="mi">10</span> <span class="mi">7</span><span class="p">)</span>
+      <span class="mi">6</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>following a formatting convention known as <a name="index_term_0198"></a><em>pretty-printing</em>, in which each long combination is written so that the operands are aligned vertically.
+The resulting indentations display clearly the structure of the expression.<a class="footnote-reference brackets" href="#foot-1-1-6" id="id3">3</a></p>
+<p>Even with complex expressions, the interpreter always operates in the same basic cycle: It reads an expression from the terminal, evaluates the expression, and prints the result.
+This mode of operation is often expressed by saying that the interpreter runs in a <a name="index_term_0204"></a><a name="index_term_0206"></a><em>read-eval-print loop</em>.
+Observe in particular that it is not necessary to explicitly instruct the interpreter to print the value of the expression.<a class="footnote-reference brackets" href="#foot-1-1-7" id="id4">4</a></p>
+</div>
+<div class="section" id="naming-and-the-environment">
+<h2><span class="section-number">1.1.2. </span>Naming and the Environment<a class="headerlink" href="#naming-and-the-environment" title="Permalink to this headline">¶</a></h2>
+<p>A critical aspect of a programming language is the means it provides for using <a name="index_term_0216"></a>names to refer to computational objects.
+We say that the <a name="index_term_0218"></a>name identifies a <a name="index_term_0220"></a><em>variable</em> whose <a name="index_term_0222"></a><em>value</em> is the object.</p>
+<p>In the Scheme dialect of Lisp, we name things with <a name="index_term_0224"></a><a name="index_term_0226"></a><code class="docutils literal notranslate"><span class="pre">define</span></code>.
+Typing</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="nv">size</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>causes the interpreter to associate the value 2 with the name <code class="docutils literal notranslate"><span class="pre">size</span></code>.<a class="footnote-reference brackets" href="#foot-1-1-8" id="id5">5</a> Once the name <code class="docutils literal notranslate"><span class="pre">size</span></code> has been associated with the number 2, we can refer to the value 2 by name:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">size</span>
+<span class="mi">2</span>
+
+<span class="p">(</span><span class="o">*</span> <span class="mi">5</span> <span class="n">size</span><span class="p">)</span>
+<span class="mi">10</span>
+</pre></div>
+</div>
+<p>Here are further examples of the use of <code class="docutils literal notranslate"><span class="pre">define</span></code>:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="nv">pi</span> <span class="mf">3.14159</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k">define </span><span class="nv">radius</span> <span class="mi">10</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">* </span><span class="nv">pi</span> <span class="p">(</span><span class="nb">* </span><span class="nv">radius</span> <span class="nv">radius</span><span class="p">))</span>
+<span class="mf">314.159</span>
+
+<span class="p">(</span><span class="k">define </span><span class="nv">circumference</span> <span class="p">(</span><span class="nb">* </span><span class="mi">2</span> <span class="nv">pi</span> <span class="nv">radius</span><span class="p">))</span>
+
+<span class="nv">circumference</span>
+<span class="mf">62.8318</span>
+</pre></div>
+</div>
+<p><a name="index_term_0232"></a><code class="docutils literal notranslate"><span class="pre">Define</span></code> is our language’s simplest means of abstraction, for it allows us to use simple names to refer to the results of compound operations, such as the <code class="docutils literal notranslate"><span class="pre">circumference</span></code> computed above.
+In general, computational objects may have very complex structures, and it would be extremely inconvenient to have to remember and repeat their details each time we want to use them.
+Indeed, complex programs are constructed by building, step by step, computational objects of increasing complexity.
+The interpreter makes this step-by-step program construction particularly convenient because name-object associations can be created incrementally in successive interactions.
+This feature encourages the <a name="index_term_0234"></a><a name="index_term_0236"></a>incremental development and testing of programs and is largely responsible for the fact that <a name="index_term_0238"></a>a Lisp program usually consists of a large number of relatively simple procedures.</p>
+<p>It should be clear that the possibility of associating values with symbols and later retrieving them means that the interpreter must maintain some sort of memory that keeps track of the name-object pairs.
+This memory is called the <a name="index_term_0240"></a><em>environment</em> (more precisely the <a name="index_term_0242"></a><em>global environment</em>, since we will see later that a computation may involve a number of different environments).<a class="footnote-reference brackets" href="#foot-1-1-9" id="id6">6</a></p>
+</div>
+<div class="section" id="evaluating-combinations">
+<span id="section-1-1-3"></span><h2><span class="section-number">1.1.3. </span>Evaluating Combinations<a class="headerlink" href="#evaluating-combinations" title="Permalink to this headline">¶</a></h2>
+<p><a name="index_term_0244"></a><a name="index_term_0246"></a> One of our goals in this chapter is to isolate issues about thinking procedurally.
+As a case in point, let us consider that, in evaluating combinations, the interpreter is itself following a procedure.</p>
+<p>To evaluate a combination, do the following:</p>
+<ol class="simple">
+<li><p>Evaluate the subexpressions of the combination.</p></li>
+<li><p>Apply the procedure that is the value of the leftmost subexpression (the operator) to the arguments that are the values of the other subexpressions (the operands).</p></li>
+</ol>
+<p>Even this simple rule illustrates some important points about processes in general.
+First, observe that the first step dictates that in order to accomplish the evaluation process for a combination we must first perform the evaluation process on each element of the combination.
+Thus, the evaluation rule is <a name="index_term_0248"></a><em>recursive</em> in nature; that is, it includes, as one of its steps, the need to invoke the rule itself.<a class="footnote-reference brackets" href="#foot-1-1-10" id="id7">7</a></p>
+<p><a name="index_term_0250"></a>Notice how succinctly the idea of recursion can be used to express what, in the case of a deeply nested combination, would otherwise be viewed as a rather complicated process.
+For example, evaluating</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">+ </span><span class="mi">2</span> <span class="p">(</span><span class="nb">* </span><span class="mi">4</span> <span class="mi">6</span><span class="p">))</span>
+   <span class="p">(</span><span class="nb">+ </span><span class="mi">3</span> <span class="mi">5</span> <span class="mi">7</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>requires that the evaluation rule be applied to four different combinations.
+We can obtain a picture of this process by <a name="index_term_0252"></a>representing the combination in the form of a <a name="index_term_0254"></a>tree, as shown in <a class="reference internal" href="#chapter-1-figure-1"><span class="std std-ref"><a class="reference internal" href="#chapter-1-figure-1"><span class="std std-numref">Fig. 1.1</span></a></span></a>.
+Each combination is represented by a <a name="index_term_0256"></a>node with <a name="index_term_0258"></a>branches corresponding to the operator and the operands of the combination stemming from it.
+The <a name="index_term_0260"></a>terminal nodes (that is, nodes with no branches stemming from them) represent either operators or numbers.
+Viewing evaluation in terms of the tree, we can imagine that the values of the operands percolate upward, starting from the terminal nodes and then combining at higher and higher levels.
+In general, we shall see that recursion is a very powerful technique for dealing with hierarchical, treelike objects.
+In fact, the “percolate values upward” form of the evaluation rule is an example of a general kind of process known as <a name="index_term_0262"></a><em>tree accumulation</em>.</p>
+<div class="figure align-default" id="chapter-1-figure-1">
+<img alt="Tree representation, showing the value of each subcombination" src="../_images/chapter_1_image_1.png" />
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Tree representation, showing the value of each subcombination</span><a class="headerlink" href="#chapter-1-figure-1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Next, observe that the repeated application of the first step brings us to the point where we need to evaluate, not combinations, but primitive expressions such as numerals, built-in operators, or other names.
+We take care of the primitive cases by stipulating that</p>
+<p><a name="index_term_0264"></a><a name="index_term_0266"></a></p>
+<ul class="simple">
+<li><p>the values of numerals are the numbers that they name,</p></li>
+<li><p>the values of built-in operators are the machine instruction sequences that carry out the corresponding operations, and</p></li>
+<li><p>the values of other names are the objects associated with those names in the environment.</p></li>
+</ul>
+<p>We may regard the second rule as a special case of the third one by stipulating that symbols such as <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code> are also included in the global environment, and are associated with the sequences of machine instructions that are their “values.” The key point to notice is the role of the <a name="index_term_0268"></a>environment in determining the meaning of the symbols in expressions.
+In an interactive language such as Lisp, it is meaningless to speak of the value of an expression such as <code class="docutils literal notranslate"><span class="pre">(+</span> <span class="pre">x</span> <span class="pre">1)</span></code> without specifying any information about the environment that would provide a meaning for the symbol <code class="docutils literal notranslate"><span class="pre">x</span></code> (or even for the symbol <code class="docutils literal notranslate"><span class="pre">+</span></code>).
+As we shall see in chapter 3, the general notion of the environment as providing a context in which evaluation takes place will play an important role in our understanding of program execution.</p>
+<p><a name="index_term_0270"></a>Notice that the evaluation rule given above does not handle definitions.
+For instance, evaluating <code class="docutils literal notranslate"><span class="pre">(define</span> <span class="pre">x</span> <span class="pre">3)</span></code> does not apply <code class="docutils literal notranslate"><span class="pre">define</span></code> to two arguments, one of which is the value of the symbol <code class="docutils literal notranslate"><span class="pre">x</span></code> and the other of which is 3, since the purpose of the <code class="docutils literal notranslate"><span class="pre">define</span></code> is precisely to associate <code class="docutils literal notranslate"><span class="pre">x</span></code> with a value.
+(That is, <code class="docutils literal notranslate"><span class="pre">(define</span> <span class="pre">x</span> <span class="pre">3)</span></code> is not a combination.)</p>
+<p><a name="index_term_0272"></a>Such exceptions to the general evaluation rule are called <em>special forms</em>.
+<code class="docutils literal notranslate"><span class="pre">Define</span></code> is the only example of a special form that we have seen so far, but we will meet others shortly.
+<a name="index_term_0274"></a>Each special form has its own evaluation rule.
+The various kinds of expressions (each with its associated evaluation rule) constitute the <a name="index_term_0276"></a>syntax of the programming language.
+In comparison with most other programming languages, Lisp has a very simple syntax; that is, the evaluation rule for expressions can be described by a simple general rule together with specialized rules for a small number of special forms.<a class="footnote-reference brackets" href="#foot-1-1-11" id="id8">8</a></p>
+</div>
+<div class="section" id="compound-procedures">
+<span id="section-1-1-4"></span><h2><span class="section-number">1.1.4. </span>Compound Procedures<a class="headerlink" href="#compound-procedures" title="Permalink to this headline">¶</a></h2>
+<p>We have identified in Lisp some of the elements that must appear in any powerful programming language:</p>
+<ul class="simple">
+<li><p>Numbers and arithmetic operations are primitive data and procedures.</p></li>
+<li><p>Nesting of combinations provides a means of combining operations.</p></li>
+<li><p>Definitions that associate names with values provide a limited means of abstraction.</p></li>
+</ul>
+<p>Now we will learn about <a name="index_term_0292"></a><em>procedure definitions</em>, a much more powerful abstraction technique by which a compound operation can be given a name and then referred to as a unit.</p>
+<p>We begin by examining how to express the idea of “squaring.” We might say, “To square something, multiply it by itself.” This is expressed in our language as</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="k">define </span><span class="p">(</span><span class="nf">square</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>We can understand this in the following way:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">square</span>     <span class="nv">x</span><span class="p">)</span>        <span class="p">(</span><span class="nb">* </span>     <span class="nv">x</span>       <span class="nv">x</span><span class="p">))</span>
+<span class="c1">;  ↑       ↑        ↑          ↑      ↑       ↑    </span>
+<span class="c1">;  To    square something, multiply   it by itself.</span>
+</pre></div>
+</div>
+<p><a name="index_term_0296"></a><a name="index_term_0298"></a>We have here a <em>compound procedure</em>, which has been given the name <code class="docutils literal notranslate"><span class="pre">square</span></code>.
+The procedure represents the operation of multiplying something by itself.
+The thing to be multiplied is given a local name, <code class="docutils literal notranslate"><span class="pre">x</span></code>, which plays the same role that a pronoun plays in natural language.
+<a name="index_term_0300"></a><a name="index_term_0302"></a><a name="index_term_0304"></a>Evaluating the definition creates this compound procedure and associates it with the name <code class="docutils literal notranslate"><span class="pre">square</span></code>.<a class="footnote-reference brackets" href="#foot-1-1-12" id="id9">9</a></p>
+<p><a name="index_term_0306"></a><a name="index_term_0308"></a>The general form of a procedure definition is</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">&lt;name&gt;</span> <span class="nv">&lt;formal</span> <span class="nv">parameters&gt;</span><span class="p">)</span> <span class="nv">&lt;body&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><a name="index_term_0310"></a><a name="index_term_0312"></a>The <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code> is a symbol to be associated with the procedure definition in the environment.<a class="footnote-reference brackets" href="#foot-1-1-13" id="id10">10</a>The <a name="index_term_0318"></a><a name="index_term_0320"></a><code class="docutils literal notranslate"><span class="pre">&lt;formal</span> <span class="pre">parameters&gt;</span></code> are the names used within the body of the procedure to refer to the corresponding arguments of the procedure.
+The <a name="index_term_0322"></a><a name="index_term_0324"></a><code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code> is an expression that will yield the value of the procedure application when the formal parameters are replaced by the actual arguments to which the procedure is applied.<a class="footnote-reference brackets" href="#foot-1-1-14" id="id11">11</a>The <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code> and the <code class="docutils literal notranslate"><span class="pre">&lt;formal</span> <span class="pre">parameters&gt;</span></code> are grouped within <a name="index_term_0328"></a>parentheses, just as they would be in an actual call to the procedure being defined.</p>
+<p>Having defined <code class="docutils literal notranslate"><span class="pre">square</span></code>, we can now use it:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">square</span> <span class="mi">21</span><span class="p">)</span>
+<span class="mi">441</span>
+
+<span class="p">(</span><span class="nf">square</span> <span class="p">(</span><span class="nb">+ </span><span class="mi">2</span> <span class="mi">5</span><span class="p">))</span>
+<span class="mi">49</span>
+
+<span class="p">(</span><span class="nf">square</span> <span class="p">(</span><span class="nf">square</span> <span class="mi">3</span><span class="p">))</span>
+<span class="mi">81</span>
+</pre></div>
+</div>
+<p>We can also use <code class="docutils literal notranslate"><span class="pre">square</span></code> as a building block in defining other procedures.
+For example, <span class="math notranslate nohighlight">\( x^2 + y^ 2 \)</span> can be expressed as</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nf">square</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nf">square</span> <span class="nv">y</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>We can easily define a procedure <code class="docutils literal notranslate"><span class="pre">sum-of-squares</span></code> that, given any two numbers as arguments, produces the sum of their squares:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">sum-of-squares</span> <span class="nv">x</span> <span class="nv">y</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nf">square</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nf">square</span> <span class="nv">y</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nf">sum-of-squares</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">)</span>
+<span class="mi">25</span>
+</pre></div>
+</div>
+<p>Now we can use <code class="docutils literal notranslate"><span class="pre">sum-of-squares</span></code> as a building block in constructing further procedures:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">f</span> <span class="nv">a</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">sum-of-squares</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">a</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">a</span> <span class="mi">2</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nf">f</span> <span class="mi">5</span><span class="p">)</span>
+<span class="mi">136</span>
+</pre></div>
+</div>
+<p><a name="index_term_0332"></a>Compound procedures are used in exactly the same way as primitive procedures.
+Indeed, one could not tell by looking at the definition of <code class="docutils literal notranslate"><span class="pre">sum-of-squares</span></code> given above whether <code class="docutils literal notranslate"><span class="pre">square</span></code> was built into the interpreter, like <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code>, or defined as a compound procedure.</p>
+</div>
+<div class="section" id="the-substitution-model-for-procedure-application">
+<span id="section-1-1-5"></span><h2><span class="section-number">1.1.5. </span>The Substitution Model for Procedure Application<a class="headerlink" href="#the-substitution-model-for-procedure-application" title="Permalink to this headline">¶</a></h2>
+<p><a name="index_term_0334"></a> To evaluate a combination whose operator names a compound procedure, the interpreter follows much the same process as for combinations whose operators name primitive procedures, which we described in <a class="reference internal" href="#section-1-1-3"><span class="std std-ref">section 1.1.3</span></a>.
+That is, the interpreter evaluates the elements of the combination and applies the procedure (which is the value of the operator of the combination) to the arguments (which are the values of the operands of the combination).</p>
+<p>We can assume that the mechanism for applying primitive procedures to arguments is built into the interpreter.
+For compound procedures, the application process is as follows:</p>
+<ul class="simple">
+<li><p>To apply a compound procedure to arguments, evaluate the body of the procedure with each formal parameter replaced by the corresponding argument.</li></p></li>
+</ul>
+<p>To illustrate this process, let’s evaluate the combination</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">f</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">f</span></code> is the procedure defined in <a class="reference internal" href="#section-1-1-4"><span class="std std-ref">section 1.1.4</span></a>.
+We begin by retrieving the body of <code class="docutils literal notranslate"><span class="pre">f</span></code>:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">sum-of-squares</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">a</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">a</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Then we replace the formal parameter <code class="docutils literal notranslate"><span class="pre">a</span></code> by the argument 5:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">sum-of-squares</span> <span class="p">(</span><span class="nb">+ </span><span class="mi">5</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="mi">5</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Thus the problem reduces to the evaluation of a combination with two operands and an operator <code class="docutils literal notranslate"><span class="pre">sum-of-squares</span></code>.
+Evaluating this combination involves three subproblems.
+We must evaluate the operator to get the procedure to be applied, and we must evaluate the operands to get the arguments.
+Now <code class="docutils literal notranslate"><span class="pre">(+</span> <span class="pre">5</span> <span class="pre">1)</span></code> produces 6 and <code class="docutils literal notranslate"><span class="pre">(*</span> <span class="pre">5</span> <span class="pre">2)</span></code> produces 10, so we must apply the <code class="docutils literal notranslate"><span class="pre">sum-of-squares</span></code> procedure to 6 and 10.
+These values are substituted for the formal parameters <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> in the body of <code class="docutils literal notranslate"><span class="pre">sum-of-squares</span></code>, reducing the expression to</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nf">square</span> <span class="mi">6</span><span class="p">)</span> <span class="p">(</span><span class="nf">square</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>If we use the definition of <code class="docutils literal notranslate"><span class="pre">square</span></code>, this reduces to</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">* </span><span class="mi">6</span> <span class="mi">6</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="mi">10</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>which reduces by multiplication to</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">+ </span><span class="mi">36</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and finally to</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="mi">136</span>
+</pre></div>
+</div>
+<p>The process we have just described is called the <em>substitution model</em> for procedure application.
+It can be taken as a model that determines the “meaning” of procedure application, insofar as the procedures in this chapter are concerned.
+However, there are two points that should be stressed:</p>
+<ul class="simple">
+<li><p>The purpose of the substitution is to help us think about procedure application, not to provide a description of how the interpreter really works.
+Typical interpreters do not evaluate procedure applications by manipulating the text of a procedure to substitute values for the formal parameters.
+In practice, the “substitution” is accomplished by using a local environment for the formal parameters.
+We will discuss this more fully in chapters 3 and 4 when we examine the implementation of an interpreter in detail.</p></li>
+<li><p>Over the course of this book, we will present a sequence of increasingly elaborate models of how interpreters work, culminating with a complete implementation of an interpreter and compiler in chapter 5.
+The substitution model is only the first of these models – a way to get started thinking formally about the evaluation process.
+In general, when <a name="index_term_0336"></a>modeling phenomena in science and engineering, we begin with simplified, incomplete models.
+As we examine things in greater detail, these simple models become inadequate and must be replaced by more refined models.
+The substitution model is no exception.
+In particular, when we address in chapter 3 the use of procedures with “mutable data,” we will see that the substitution model breaks down and must be replaced by a more complicated model of procedure application.<a class="footnote-reference brackets" href="#foot-1-1-15" id="id12">12</a></p></li>
+</ul>
+<div class="section" id="applicative-order-versus-normal-order">
+<h3>Applicative order versus normal order<a class="headerlink" href="#applicative-order-versus-normal-order" title="Permalink to this headline">¶</a></h3>
+<p>According to the description of evaluation given in <a class="reference internal" href="#section-1-1-3"><span class="std std-ref">section 1.1.3</span></a>, the interpreter first evaluates the operator and operands and then applies the resulting procedure to the resulting arguments.
+This is not the only way to perform evaluation.
+An alternative evaluation model would not evaluate the operands until their values were needed.
+Instead it would first substitute operand expressions for parameters until it obtained an expression involving only primitive operators, and would then perform the evaluation.
+If we used this method, the evaluation of</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">f</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>would proceed according to the sequence of expansions</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">sum-of-squares</span> <span class="p">(</span><span class="nb">+ </span><span class="mi">5</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="mi">5</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nb">+ </span>   <span class="p">(</span><span class="nf">square</span> <span class="p">(</span><span class="nb">+ </span><span class="mi">5</span> <span class="mi">1</span><span class="p">))</span>      <span class="p">(</span><span class="nf">square</span> <span class="p">(</span><span class="nb">* </span><span class="mi">5</span> <span class="mi">2</span><span class="p">))</span>  <span class="p">)</span>
+
+<span class="p">(</span><span class="nb">+ </span>   <span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">+ </span><span class="mi">5</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="mi">5</span> <span class="mi">1</span><span class="p">))</span>   <span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="nb">* </span><span class="mi">5</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="mi">5</span> <span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>followed by the reductions</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">+ </span>        <span class="p">(</span><span class="nb">* </span><span class="mi">6</span> <span class="mi">6</span><span class="p">)</span>             <span class="p">(</span><span class="nb">* </span><span class="mi">10</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nb">+ </span>          <span class="mi">36</span>                   <span class="mi">100</span><span class="p">)</span>
+
+                    <span class="mi">136</span>
+</pre></div>
+</div>
+<p>This gives the same answer as our previous evaluation model, but the process is different.
+In particular, the evaluations of <code class="docutils literal notranslate"><span class="pre">(+</span> <span class="pre">5</span> <span class="pre">1)</span></code> and <code class="docutils literal notranslate"><span class="pre">(*</span> <span class="pre">5</span> <span class="pre">2)</span></code> are each performed twice here, corresponding to the reduction of the expression</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>with <code class="docutils literal notranslate"><span class="pre">x</span></code> replaced respectively by <code class="docutils literal notranslate"><span class="pre">(+</span> <span class="pre">5</span> <span class="pre">1)</span></code> and <code class="docutils literal notranslate"><span class="pre">(*</span> <span class="pre">5</span> <span class="pre">2)</span></code>.</p>
+<p>This alternative “fully expand and then reduce” evaluation method is known as <a name="index_term_0340"></a><em>normal-order evaluation</em>, in contrast to the “evaluate the arguments and then apply” method that the interpreter actually uses, which is called <a name="index_term_0342"></a><em>applicative-order evaluation</em>.
+It can be shown that, for procedure applications that can be modeled using substitution (including all the procedures in the first two chapters of this book) and that yield legitimate values, normal-order and applicative-order evaluation produce the same value.
+(See exercise <a href="#%_thm_1.5">1.5</a> for an instance of an “illegitimate” value where normal-order and applicative-order evaluation do not give the same result.)</p>
+<p><a name="index_term_0344"></a><a name="index_term_0346"></a>Lisp uses applicative-order evaluation, partly because of the additional efficiency obtained from avoiding multiple evaluations of expressions such as those illustrated with <code class="docutils literal notranslate"><span class="pre">(+</span> <span class="pre">5</span> <span class="pre">1)</span></code> and <code class="docutils literal notranslate"><span class="pre">(*</span> <span class="pre">5</span> <span class="pre">2)</span></code> above and, more significantly, because normal-order evaluation becomes much more complicated to deal with when we leave the realm of procedures that can be modeled by substitution.
+On the other hand, normal-order evaluation can be an extremely valuable tool, and we will investigate some of its implications in chapters 3 and 4.<a class="footnote-reference brackets" href="#foot-1-1-16" id="id13">13</a></p>
+</div>
+</div>
+<div class="section" id="conditional-expressions-and-predicates">
+<span id="section-1-1-6"></span><h2><span class="section-number">1.1.6. </span>Conditional Expressions and Predicates<a class="headerlink" href="#conditional-expressions-and-predicates" title="Permalink to this headline">¶</a></h2>
+<p>The expressive power of the class of procedures that we can define at this point is very limited, because we have no way to make tests and to perform different operations depending on the result of a test.
+For instance, we cannot define a procedure that computes the <a name="index_term_0348"></a>absolute value of a number by testing whether the number is positive, negative, or zero and taking different actions in the different cases according to the rule</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+|r| = \begin{cases} r &amp; \textrm{ if } \  r &gt; 0 \\ 0 &amp; \text{ if } \  r = 0 \\ -r &amp; \textrm{ if } \  r &lt; 0 \end{cases}
+\end{split}\]</div>
+<p><a name="index_term_0350"></a>This construct is called a <em>case analysis</em>, and there is a special form in Lisp for notating such a case analysis.
+It is called <a name="index_term_0352"></a><a name="index_term_0354"></a><a name="index_term_0356"></a><code class="docutils literal notranslate"><span class="pre">cond</span></code> (which stands for “conditional”), and it is used as follows:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">abs </span><span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">&gt; </span><span class="nv">x</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">x</span><span class="p">)</span>
+        <span class="p">((</span><span class="nb">= </span><span class="nv">x</span> <span class="mi">0</span><span class="p">)</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">((</span><span class="nb">&lt; </span><span class="nv">x</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="nv">x</span><span class="p">))))</span>
+</pre></div>
+</div>
+<p>The general form of a conditional expression is</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">cond </span><span class="p">(</span><span class="nf">&lt;p1&gt;</span> <span class="nv">&lt;e1&gt;</span><span class="p">)</span>
+      <span class="p">(</span><span class="nf">&lt;p2&gt;</span> <span class="nv">&lt;e2&gt;</span><span class="p">)</span>
+      <span class="o">...</span>
+      <span class="p">(</span><span class="nf">&lt;pn&gt;</span> <span class="nv">&lt;en&gt;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>consisting of the symbol <code class="docutils literal notranslate"><span class="pre">cond</span></code> followed by <a name="index_term_0360"></a>parenthesized pairs of expressions <code class="docutils literal notranslate"><span class="pre">(&lt;p&gt;</span> <span class="pre">&lt;e&gt;)</span></code> called <a name="index_term_0362"></a><a name="index_term_0364"></a><em>clauses</em>.
+The first expression in each pair is a <a name="index_term_0366"></a><em>predicate</em> – that is, an expression whose value is interpreted as either true or false.<a class="footnote-reference brackets" href="#foot-1-1-17" id="id14">14</a></p>
+<p><a name="index_term_0384"></a><a name="index_term_0386"></a>Conditional expressions are evaluated as follows.
+The predicate <code class="docutils literal notranslate"><span class="pre">&lt;p1&gt;</span></code> is evaluated first.
+If its value is false, then <code class="docutils literal notranslate"><span class="pre">&lt;p2&gt;</span></code> is evaluated.
+If <code class="docutils literal notranslate"><span class="pre">&lt;p2&gt;</span></code>’s value is also false, then <code class="docutils literal notranslate"><span class="pre">&lt;p3&gt;</span></code> is evaluated.
+This process continues until a predicate is found whose value is true, in which case the interpreter returns the value of the corresponding <a name="index_term_0388"></a><em>consequent expression</em> <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> of the clause as the value of the conditional expression.
+If none of the <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>’s is found to be true, the value of the <code class="docutils literal notranslate"><span class="pre">cond</span></code> is undefined.</p>
+<p><a name="index_term_0390"></a>The word <em>predicate</em> is used for procedures that return true or false, as well as for expressions that evaluate to true or false.
+The absolute-value procedure <code class="docutils literal notranslate"><span class="pre">abs</span></code> makes use of the <a name="index_term_0392"></a><a name="index_term_0394"></a><a name="index_term_0396"></a><a name="index_term_0398"></a><a name="index_term_0400"></a><a name="index_term_0402"></a><a name="index_term_0404"></a><a name="index_term_0406"></a><a name="index_term_0408"></a>primitive predicates <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, and <code class="docutils literal notranslate"><span class="pre">=</span></code>.<a class="footnote-reference brackets" href="#foot-1-1-18" id="id15">15</a>These take two numbers as arguments and test whether the first number is, respectively, greater than, less than, or equal to the second number, returning true or false accordingly.</p>
+<p>Another way to write the absolute-value procedure is</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">abs </span><span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">&lt; </span><span class="nv">x</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="nv">x</span><span class="p">))</span>
+        <span class="p">(</span><span class="k">else </span><span class="nv">x</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>which could be expressed in English as “If <span class="math notranslate nohighlight">\(x\)</span> is less than zero return <span class="math notranslate nohighlight">\(-x\)</span>; otherwise return <span class="math notranslate nohighlight">\(x\)</span>.”
+<a name="index_term_0416"></a><code class="docutils literal notranslate"><span class="pre">else</span></code> is a special symbol that can be used in place of the <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> in the final clause of a <code class="docutils literal notranslate"><span class="pre">cond</span></code>.
+This causes the <code class="docutils literal notranslate"><span class="pre">cond</span></code> to return as its value the value of the corresponding <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> whenever all previous clauses have been bypassed.
+In fact, any expression that always evaluates to a true value could be used as the <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> here.</p>
+<p>Here is yet another way to write the absolute-value procedure:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">abs </span><span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">&lt; </span><span class="nv">x</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="p">(</span><span class="nb">- </span><span class="nv">x</span><span class="p">)</span>
+      <span class="nv">x</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><a name="index_term_0420"></a><a name="index_term_0422"></a><a name="index_term_0424"></a>This uses the special form <code class="docutils literal notranslate"><span class="pre">if</span></code>, a restricted type of conditional that can be used when there are precisely <a name="index_term_0426"></a>two cases in the case analysis.
+The general form of an <code class="docutils literal notranslate"><span class="pre">if</span></code> expression is</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">if </span><span class="nv">&lt;predicate&gt;</span> <span class="nv">&lt;consequent&gt;</span> <span class="nv">&lt;alternative&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><a name="index_term_0428"></a><a name="index_term_0430"></a><a name="index_term_0432"></a>To evaluate an <code class="docutils literal notranslate"><span class="pre">if</span></code> expression, the interpreter starts by evaluating the <a name="index_term_0434"></a><code class="docutils literal notranslate"><span class="pre">&lt;predicate&gt;</span></code> part of the expression.
+If the <code class="docutils literal notranslate"><span class="pre">&lt;predicate&gt;</span></code> evaluates to a true value, the interpreter then evaluates the <a name="index_term_0436"></a><code class="docutils literal notranslate"><span class="pre">&lt;consequent&gt;</span></code> and returns its value.
+Otherwise it evaluates the <a name="index_term_0438"></a><code class="docutils literal notranslate"><span class="pre">&lt;alternative&gt;</span></code> and returns its value.<a class="footnote-reference brackets" href="#foot-1-1-19" id="id16">16</a></p>
+<p>In addition to primitive predicates such as <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">=</span></code>, and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, there are logical composition operations, which enable us to construct compound predicates.
+The three most frequently used are these:</p>
+<ul class="simple">
+<li><p><a name="index_term_0446"></a><a name="index_term_0448"></a><a name="index_term_0450"></a><a name="index_term_0452"></a><code class="docutils literal notranslate"><span class="pre">(and</span> <span class="pre">&lt;e1&gt;</span> <span class="pre">...</span> <span class="pre">&lt;en&gt;)</span></code><br>The interpreter evaluates the expressions <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> one at a time, in left-to-right order. If any <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> evaluates to false, the value of the <code class="docutils literal notranslate"><span class="pre">and</span></code> expression is false, and the rest of the <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code>’s are not evaluated.
+If all <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code>’s evaluate to true values, the value of the <code class="docutils literal notranslate"><span class="pre">and</span></code> expression is the value of the last one.<a name="index_term_0454"></a><a name="index_term_0456"></a><a name="index_term_0458"></a><a name="index_term_0460"></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(or</span> <span class="pre">&lt;e1&gt;</span> <span class="pre">...</span> <span class="pre">&lt;en&gt;)</span></code> <br> The interpreter evaluates the expressions <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> one at a time, in left-to-right order. If any <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> evaluates to a true value, that value is returned as the value of the <code class="docutils literal notranslate"><span class="pre">or</span></code> expression, and the rest of the <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code>’s are not evaluated. If all <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code>’s evaluate to false, the value of the <code class="docutils literal notranslate"><span class="pre">or</span></code> expression is false.<a name="index_term_0462"></a><a name="index_term_0464"></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(not</span> <span class="pre">&lt;e&gt;)</span></code> <br> The value of a <code class="docutils literal notranslate"><span class="pre">not</span></code> expression is true when the expression <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> evaluates to false, and false otherwise.</p></li>
+</ul>
+<p><a name="index_term_0466"></a><a name="index_term_0468"></a>Notice that <code class="docutils literal notranslate"><span class="pre">and</span></code> and <code class="docutils literal notranslate"><span class="pre">or</span></code> are special forms, not procedures, because the subexpressions are not necessarily all evaluated.
+<code class="docutils literal notranslate"><span class="pre">not</span></code> is an ordinary procedure.</p>
+<p>As an example of how these are used, the condition that a number <span class="math notranslate nohighlight">\(x\)</span> be in the range <span class="math notranslate nohighlight">\(5 &lt; x &lt; 10\)</span> may be expressed as</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">and </span><span class="p">(</span><span class="nb">&gt; </span><span class="nv">x</span> <span class="mi">5</span><span class="p">)</span> <span class="p">(</span><span class="nb">&lt; </span><span class="nv">x</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>As another example, we can define a predicate to test whether one number is greater than or equal to another as</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">&gt;= </span><span class="nv">x</span> <span class="nv">y</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">or </span><span class="p">(</span><span class="nb">&gt; </span><span class="nv">x</span> <span class="nv">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">= </span><span class="nv">x</span> <span class="nv">y</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>or alternatively as</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">&gt;= </span><span class="nv">x</span> <span class="nv">y</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">not </span><span class="p">(</span><span class="nb">&lt; </span><span class="nv">x</span> <span class="nv">y</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p><a name="exercise_1_1"><strong>Exercise 1.1</strong></a> Below is a sequence of expressions.
+What is the result printed by the interpreter in response to each expression? Assume that the sequence is to be evaluated in the order in which it is presented.</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>
+
+<span class="p">(</span><span class="nb">+ </span><span class="mi">5</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">- </span><span class="mi">9</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">/ </span><span class="mi">6</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">* </span><span class="mi">2</span> <span class="mi">4</span><span class="p">)</span> <span class="p">(</span><span class="nb">- </span><span class="mi">4</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="p">(</span><span class="k">define </span><span class="nv">a</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k">define </span><span class="nv">b</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">a</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nb">+ </span><span class="nv">a</span> <span class="nv">b</span> <span class="p">(</span><span class="nb">* </span><span class="nv">a</span> <span class="nv">b</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nb">= </span><span class="nv">a</span> <span class="nv">b</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="k">and </span><span class="p">(</span><span class="nb">&gt; </span><span class="nv">b</span> <span class="nv">a</span><span class="p">)</span> <span class="p">(</span><span class="nb">&lt; </span><span class="nv">b</span> <span class="p">(</span><span class="nb">* </span><span class="nv">a</span> <span class="nv">b</span><span class="p">)))</span>
+    <span class="nv">b</span>
+    <span class="nv">a</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">= </span><span class="nv">a</span> <span class="mi">4</span><span class="p">)</span> <span class="mi">6</span><span class="p">)</span>
+      <span class="p">((</span><span class="nb">= </span><span class="nv">b</span> <span class="mi">4</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="mi">6</span> <span class="mi">7</span> <span class="nv">a</span><span class="p">))</span>
+      <span class="p">(</span><span class="k">else </span><span class="mi">25</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nb">+ </span><span class="mi">2</span> <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">&gt; </span><span class="nv">b</span> <span class="nv">a</span><span class="p">)</span> <span class="nv">b</span> <span class="nv">a</span><span class="p">))</span>
+
+<span class="p">(</span><span class="nb">* </span><span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">&gt; </span><span class="nv">a</span> <span class="nv">b</span><span class="p">)</span> <span class="nv">a</span><span class="p">)</span>
+         <span class="p">((</span><span class="nb">&lt; </span><span class="nv">a</span> <span class="nv">b</span><span class="p">)</span> <span class="nv">b</span><span class="p">)</span>
+         <span class="p">(</span><span class="k">else </span><span class="mi">-1</span><span class="p">))</span>
+   <span class="p">(</span><span class="nb">+ </span><span class="nv">a</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><a name="exercise_1_2"><strong>Exercise 1.2</strong></a> Translate the following expression into prefix form</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{5+4+(2-(3-(6+\frac{4}{5})))}{3(6-2)(2-7)}
+\]</div>
+<p><a name="exercise_1_3"><strong>Exercise 1.3</strong></a> Define a procedure that takes three numbers as arguments and returns the sum of the squares of the two larger numbers.</p>
+<p><a name="exercise_1_4"><strong>Exercise 1.4</strong></a> <a name="index_term_0474"></a><a name="index_term_0476"></a><a name="index_term_0478"></a>Observe that our model of evaluation allows for combinations whose operators are compound expressions.
+Use this observation to describe the behavior of the following procedure:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">a-plus-abs-b</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">)</span>
+  <span class="p">((</span><span class="k">if </span><span class="p">(</span><span class="nb">&gt; </span><span class="nv">b</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">+</span> <span class="nv">-</span><span class="p">)</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><a name="exercise_1_5"><strong>Exercise 1.5</strong></a> <a name="index_term_0480"></a><a name="index_term_0482"></a>Ben Bitdiddle has invented a test to determine whether the interpreter he is faced with is using applicative-order evaluation or normal-order evaluation.
+He defines the following two procedures:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">p</span><span class="p">)</span> <span class="p">(</span><span class="nf">p</span><span class="p">))</span>
+
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">test</span> <span class="nv">x</span> <span class="nv">y</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">= </span><span class="nv">x</span> <span class="mi">0</span><span class="p">)</span>
+      <span class="mi">0</span>
+      <span class="nv">y</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Then he evaluates the expression</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">test</span> <span class="mi">0</span> <span class="p">(</span><span class="nf">p</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation? Explain your answer.
+<a name="index_term_0484"></a><a name="index_term_0486"></a>(Assume that the evaluation rule for the special form <code class="docutils literal notranslate"><span class="pre">if</span></code> is the same whether the interpreter is using normal or applicative order: The predicate expression is evaluated first, and the result determines whether to evaluate the consequent or the alternative expression.)</p>
+</div>
+<div class="section" id="example-square-roots-by-newton-s-method-a-h3">
+<span id="section-1-1-7"></span><h2><span class="section-number">1.1.7. </span>Example: Square Roots by Newton’s Method</a></h3><a class="headerlink" href="#example-square-roots-by-newton-s-method-a-h3" title="Permalink to this headline">¶</a></h2>
+<p><a name="index_term_0488"></a><a name="index_term_0490"></a>Procedures, as introduced above, are much like ordinary mathematical functions.
+They specify a value that is determined by one or more parameters.
+But there is an important difference between mathematical functions and computer procedures.
+Procedures must be effective.</p>
+<p>As a case in point, consider the problem of computing square roots.
+We can define the square-root function as</p>
+<div class="math notranslate nohighlight">
+\[
+\sqrt{r} = \textrm{the } y \textrm{ such that } y \ge 0 \textrm{ and } y^2 = r
+\]</div>
+<p>This describes a perfectly legitimate mathematical function.
+We could use it to recognize whether one number is the square root of another, or to derive facts about square roots in general.
+On the other hand, the definition does not describe a procedure.
+Indeed, it tells us almost nothing about how to actually find the square root of a given number.
+It will not help matters to rephrase this definition in pseudo-Lisp:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">sqrt </span><span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">the</span> <span class="nv">y</span> <span class="p">(</span><span class="k">and </span><span class="p">(</span><span class="nb">&gt;= </span><span class="nv">y</span> <span class="mi">0</span><span class="p">)</span>
+              <span class="p">(</span><span class="nb">= </span><span class="p">(</span><span class="nf">square</span> <span class="nv">y</span><span class="p">)</span> <span class="nv">x</span><span class="p">))))</span>
+</pre></div>
+</div>
+<p>This only begs the question.</p>
+<p>The contrast between function and procedure is a reflection of the general distinction between describing properties of things and describing how to do things, or, as it is sometimes referred to, the distinction between <a name="index_term_0492"></a><a name="index_term_0494"></a>declarative knowledge and imperative knowledge.
+In <a name="index_term_0496"></a><a name="index_term_0498"></a>mathematics we are usually concerned with declarative (what is) descriptions, whereas in computer science we are usually concerned with imperative (how to) descriptions.<a class="footnote-reference brackets" href="#foot-1-1-20" id="id17">17</a></p>
+<p><a name="index_term_0508"></a><a name="index_term_0510"></a>How does one compute square roots? The most common way is to use Newton’s method of successive approximations, which says that whenever we have a guess <em>y</em> for the value of the square root of a number <em>x</em>, we can perform a simple manipulation to get a better guess (one closer to the actual square root) by averaging <em>y</em> with <em>x</em>/<em>y</em>.<a class="footnote-reference brackets" href="#foot-1-1-21" id="id18">18</a>For example, we can compute the square root of 2 as follows.
+Suppose our initial guess is 1:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Guess</p></th>
+<th class="head"><p>Quotient</p></th>
+<th class="head"><p>Average</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>(2/1) = 2</p></td>
+<td><p>((2 + 1) / 2) = 1.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.5</p></td>
+<td><p>(2/1.5) = 1.3333</p></td>
+<td><p>((1.3333 + 1.5) / 2) = 1.4167</p></td>
+</tr>
+<tr class="row-even"><td><p>1.4167</p></td>
+<td><p>(2/1.4167) = 1.4118</p></td>
+<td><p>((1.4167 + 1.4118) / 2) = 1.4142</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.4142</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+<p>Continuing this process, we obtain better and better approximations to the square root.</p>
+<p>Now let’s formalize the process in terms of procedures.
+We start with a value for the <a name="index_term_0514"></a>radicand (the number whose square root we are trying to compute) and a value for the guess.
+If the guess is good enough for our purposes, we are done; if not, we must repeat the process with an improved guess.
+We write this basic strategy as a procedure:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">sqrt-iter</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">good-enough?</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+      <span class="nv">guess</span>
+      <span class="p">(</span><span class="nf">sqrt-iter</span> <span class="p">(</span><span class="nf">improve</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+                 <span class="nv">x</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>A guess is improved by averaging it with the quotient of the radicand and the old guess:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">improve</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">average</span> <span class="nv">guess</span> <span class="p">(</span><span class="nb">/ </span><span class="nv">x</span> <span class="nv">guess</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>where</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">average</span> <span class="nv">x</span> <span class="nv">y</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">/ </span><span class="p">(</span><span class="nb">+ </span><span class="nv">x</span> <span class="nv">y</span><span class="p">)</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>We also have to say what we mean by “good enough.” The following will do for illustration, but it is not really a very good test.
+(See exercise <a href="#%_thm_1.7">1.7</a>.) The idea is to improve the answer until it is close enough so that its square differs from the radicand by less than a predetermined tolerance (here 0.001):<a class="footnote-reference brackets" href="#foot-1-1-22" id="id19">19</a></p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">good-enough?</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">&lt; </span><span class="p">(</span><span class="nb">abs </span><span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nf">square</span> <span class="nv">guess</span><span class="p">)</span> <span class="nv">x</span><span class="p">))</span> <span class="mf">0.001</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Finally, we need a way to get started.
+For instance, we can always guess that the square root of any number is 1:<a class="footnote-reference brackets" href="#foot-1-1-23" id="id20">20</a></p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">sqrt </span><span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">sqrt-iter</span> <span class="mf">1.0</span> <span class="nv">x</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>If we type these definitions to the interpreter, we can use <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> just as we can use any procedure:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">sqrt </span><span class="mi">9</span><span class="p">)</span>
+<span class="mf">3.00009155413138</span>
+
+<span class="p">(</span><span class="nb">sqrt </span><span class="p">(</span><span class="nb">+ </span><span class="mi">100</span> <span class="mi">37</span><span class="p">))</span>
+<span class="mf">11.704699917758145</span>
+
+<span class="p">(</span><span class="nb">sqrt </span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nb">sqrt </span><span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="nb">sqrt </span><span class="mi">3</span><span class="p">)))</span>
+<span class="mf">1.7739279023207892</span>
+
+<span class="p">(</span><span class="nf">square</span> <span class="p">(</span><span class="nb">sqrt </span><span class="mi">1000</span><span class="p">))</span>
+<span class="mf">1000.000369924366</span>
+</pre></div>
+</div>
+<p><a name="index_term_0552"></a>The <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> program also illustrates that the simple procedural language we have introduced so far is sufficient for writing any purely numerical program that one could write in, say, C or Pascal.
+This might seem surprising, since we have not included in our language any iterative <a name="index_term_0554"></a>(looping) constructs that direct the computer to do something over and over again.
+<code class="docutils literal notranslate"><span class="pre">Sqrt-iter</span></code>, on the other hand, demonstrates how iteration can be accomplished using no special construct other than the ordinary ability to call a procedure.<a class="footnote-reference brackets" href="#foot-1-1-24" id="id21">21</a></p>
+<p><a name="exercise_1_6"><strong>Exercise 1.6</strong></a> <a name="index_term_0556"></a><a name="index_term_0558"></a>Alyssa P. Hacker doesn’t see why <code class="docutils literal notranslate"><span class="pre">if</span></code> needs to be provided as a special form.
+“Why can’t I just define it as an ordinary procedure in terms of <code class="docutils literal notranslate"><span class="pre">cond</span></code>?” she asks.
+Alyssa’s friend Eva Lu Ator claims this can indeed be done, and she defines a new version of <code class="docutils literal notranslate"><span class="pre">if</span></code>:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">new-if</span> <span class="nv">predicate</span> <span class="nv">then-clause</span> <span class="nv">else-clause</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">cond </span><span class="p">(</span><span class="nf">predicate</span> <span class="nv">then-clause</span><span class="p">)</span>
+        <span class="p">(</span><span class="k">else </span><span class="nv">else-clause</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>Eva demonstrates the program for Alyssa:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">new-if</span> <span class="p">(</span><span class="nb">= </span><span class="mi">2</span> <span class="mi">3</span><span class="p">)</span> <span class="mi">0</span> <span class="mi">5</span><span class="p">)</span>
+<span class="mi">5</span>
+
+<span class="p">(</span><span class="nf">new-if</span> <span class="p">(</span><span class="nb">= </span><span class="mi">1</span> <span class="mi">1</span><span class="p">)</span> <span class="mi">0</span> <span class="mi">5</span><span class="p">)</span>
+<span class="mi">0</span>
+</pre></div>
+</div>
+<p>Delighted, Alyssa uses <code class="docutils literal notranslate"><span class="pre">new-if</span></code> to rewrite the square-root program:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">sqrt-iter</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">new-if</span> <span class="p">(</span><span class="nf">good-enough?</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+          <span class="nv">guess</span>
+          <span class="p">(</span><span class="nf">sqrt-iter</span> <span class="p">(</span><span class="nf">improve</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+                     <span class="nv">x</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>What happens when Alyssa attempts to use this to compute square roots?
+Explain.</p>
+<p><a name="exercise_1_7"><strong>Exercise 1.7</strong></a> The <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> test used in computing square roots will not be very effective for finding the square roots of very small numbers.
+Also, in real computers, arithmetic operations are almost always performed with limited precision.
+This makes our test inadequate for very large numbers.
+Explain these statements, with examples showing how the test fails for small and large numbers.
+An alternative strategy for implementing <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> is to watch how <code class="docutils literal notranslate"><span class="pre">guess</span></code> changes from one iteration to the next and to stop when the change is a very small fraction of the guess.
+Design a square-root procedure that uses this kind of end test.
+Does this work better for small and large numbers?</p>
+<p><a name="exercise_1_8"><strong>Exercise 1.8</strong></a> <a name="index_term_0560"></a><a name="index_term_0562"></a>Newton’s method for cube roots is based on the fact that if <em>y</em> is an approximation to the cube root of <em>x</em>, then a better approximation is given by the value</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{x/y^2 + 27}{3}
+\]</div>
+<p>Use this formula to implement a cube-root procedure analogous to the square-root procedure.
+(In section <a href="chapter_1_section_3.html#%_sec_1.3.4">1.3.4</a> we will see how to implement Newton’s method in general as an abstraction of these square-root and cube-root procedures.)</p>
+</div>
+<div class="section" id="procedures-as-black-box-abstractions">
+<span id="section-1-1-8"></span><h2><span class="section-number">1.1.8. </span>Procedures as Black-Box Abstractions<a class="headerlink" href="#procedures-as-black-box-abstractions" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">sqrt</span></code> is our first example of a process defined by a set of mutually defined procedures.
+Notice that the definition of <code class="docutils literal notranslate"><span class="pre">sqrt-iter</span></code> is <a name="index_term_0564"></a><em>recursive</em>; that is, the procedure is defined in terms of itself.
+The idea of being able to define a procedure in terms of itself may be disturbing; it may seem unclear how such a “circular” definition could make sense at all, much less specify a well-defined process to be carried out by a computer.
+This will be addressed more carefully in section <a href="chapter_1_section_2.html#%_sec_1.2">1.2</a>.
+But first let’s consider some other important points illustrated by the <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> example.</p>
+<p><a name="index_term_0566"></a>Observe that the problem of computing square roots breaks up naturally into a number of subproblems: how to tell whether a guess is good enough, how to improve a guess, and so on.
+Each of these tasks is accomplished by a separate procedure.
+The entire <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> program can be viewed as a cluster of procedures (shown in <a class="reference internal" href="#chapter-1-figure-2"><span class="std std-ref"><a class="reference internal" href="#chapter-1-figure-2"><span class="std std-numref">Fig. 1.2</span></a></span></a>) that mirrors the decomposition of the problem into subproblems.</p>
+<div class="figure align-default" id="chapter-1-figure-2">
+<img alt="Procedural decomposition of the sqrt program." src="../_images/chapter_1_image_2.png" />
+<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Procedural decomposition of the sqrt program.</span><a class="headerlink" href="#chapter-1-figure-2" title="Permalink to this image">¶</a></p>
+</div>
+<p><a name="index_term_0568"></a>The importance of this decomposition strategy is not simply that one is dividing the program into parts.
+After all, we could take any large program and divide it into parts – the first ten lines, the next ten lines, the next ten lines, and so on.
+Rather, it is crucial that each procedure accomplishes an identifiable task that can be used as a module in defining other procedures.
+<a name="index_term_0570"></a>For example, when we define the <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> procedure in terms of <code class="docutils literal notranslate"><span class="pre">square</span></code>, we are able to regard the <code class="docutils literal notranslate"><span class="pre">square</span></code> procedure as a <a name="index_term_0572"></a>”black box.” We are not at that moment concerned with <em>how</em> the procedure computes its result, only with the fact that it computes the square.
+The details of how the square is computed can be suppressed, to be considered at a later time.
+Indeed, as far as the <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> procedure is concerned, <code class="docutils literal notranslate"><span class="pre">square</span></code> is not quite a procedure but rather an abstraction of a procedure, a so-called <a name="index_term_0574"></a><a name="index_term_0576"></a><em>procedural abstraction</em>.
+At this level of abstraction, any procedure that computes the square is equally good.</p>
+<p>Thus, considering only the values they return, the following two procedures for squaring a number should be indistinguishable.
+Each takes a numerical argument and produces the square of that number as the value.<a class="footnote-reference brackets" href="#foot-1-1-25" id="id22">22</a></p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">square</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span><span class="p">))</span>
+
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">square</span> <span class="nv">x</span><span class="p">)</span> 
+  <span class="p">(</span><span class="nb">exp </span><span class="p">(</span><span class="nf">double</span> <span class="p">(</span><span class="nb">log </span><span class="nv">x</span><span class="p">))))</span>
+
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">double</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">x</span> <span class="nv">x</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>So a procedure definition should be able to suppress detail.
+The users of the procedure may not have written the procedure themselves, but may have obtained it from another programmer as a black box.
+A user should not need to know how the procedure is implemented in order to use it.</p>
+<div class="section" id="local-names">
+<h3>Local names<a class="headerlink" href="#local-names" title="Permalink to this headline">¶</a></h3>
+<p><a name="index_term_0578"></a> One detail of a procedure’s implementation that should not matter to the user of the procedure is the implementer’s choice of names for the procedure’s formal parameters.
+Thus, the following procedures should not be distinguishable:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">square</span> <span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">x</span> <span class="nv">x</span><span class="p">))</span>
+
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">square</span> <span class="nv">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">y</span> <span class="nv">y</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This principle – that the meaning of a procedure should be independent of the parameter names used by its author – seems on the surface to be self-evident, but its consequences are profound.
+The simplest consequence is that the parameter names of a procedure must be local to the body of the procedure.
+For example, we used <code class="docutils literal notranslate"><span class="pre">square</span></code> in the definition of <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> in our square-root procedure:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">good-enough?</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">&lt; </span><span class="p">(</span><span class="nb">abs </span><span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nf">square</span> <span class="nv">guess</span><span class="p">)</span> <span class="nv">x</span><span class="p">))</span> <span class="mf">0.001</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The intention of the author of <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> is to determine if the square of the first argument is within a given tolerance of the second argument.
+We see that the author of <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> used the name <code class="docutils literal notranslate"><span class="pre">guess</span></code> to refer to the first argument and <code class="docutils literal notranslate"><span class="pre">x</span></code> to refer to the second argument.
+The argument of <code class="docutils literal notranslate"><span class="pre">square</span></code> is <code class="docutils literal notranslate"><span class="pre">guess</span></code>.
+If the author of <code class="docutils literal notranslate"><span class="pre">square</span></code> used <code class="docutils literal notranslate"><span class="pre">x</span></code> (as above) to refer to that argument, we see that the <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> must be a different <code class="docutils literal notranslate"><span class="pre">x</span></code> than the one in <code class="docutils literal notranslate"><span class="pre">square</span></code>.
+Running the procedure <code class="docutils literal notranslate"><span class="pre">square</span></code> must not affect the value of <code class="docutils literal notranslate"><span class="pre">x</span></code> that is used by <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code>, because that value of <code class="docutils literal notranslate"><span class="pre">x</span></code> may be needed by <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> after <code class="docutils literal notranslate"><span class="pre">square</span></code> is done computing.</p>
+<p>If the parameters were not local to the bodies of their respective procedures, then the parameter <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">square</span></code> could be confused with the parameter <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code>, and the behavior of <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> would depend upon which version of <code class="docutils literal notranslate"><span class="pre">square</span></code> we used.
+Thus, <code class="docutils literal notranslate"><span class="pre">square</span></code> would not be the black box we desired.</p>
+<p><a name="index_term_0580"></a><a name="index_term_0582"></a>A formal parameter of a procedure has a very special role in the procedure definition, in that it doesn’t matter what name the formal parameter has.
+Such a name is called a <a name="index_term_0584"></a><a name="index_term_0586"></a><em>bound variable</em>, and we say that the procedure definition <a name="index_term_0588"></a><em>binds</em> its formal parameters.
+The meaning of a procedure definition is unchanged if a bound variable is consistently renamed throughout the definition.<a class="footnote-reference brackets" href="#foot-1-1-26" id="id23">23</a>If a variable is not bound, we say that it is <a name="index_term_0590"></a><a name="index_term_0592"></a><em>free</em>.
+The set of expressions for which a binding defines a name is called the <a name="index_term_0594"></a><a name="index_term_0596"></a><em>scope</em> of that name.
+In a procedure definition, the bound variables declared as the <a name="index_term_0598"></a><a name="index_term_0600"></a><a name="index_term_0602"></a>formal parameters of the procedure have the body of the procedure as their scope.</p>
+<p>In the definition of <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> above, <code class="docutils literal notranslate"><span class="pre">guess</span></code> and <code class="docutils literal notranslate"><span class="pre">x</span></code> are bound variables but <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">abs</span></code>, and <code class="docutils literal notranslate"><span class="pre">square</span></code> are free.
+The meaning of <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> should be independent of the names we choose for <code class="docutils literal notranslate"><span class="pre">guess</span></code> and <code class="docutils literal notranslate"><span class="pre">x</span></code> so long as they are distinct and different from <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">abs</span></code>, and <code class="docutils literal notranslate"><span class="pre">square</span></code>.
+(If we renamed <code class="docutils literal notranslate"><span class="pre">guess</span></code> to <code class="docutils literal notranslate"><span class="pre">abs</span></code> we would have introduced a bug by <a name="index_term_0604"></a><a name="index_term_0606"></a><a name="index_term_0608"></a><em>capturing</em> the variable <code class="docutils literal notranslate"><span class="pre">abs</span></code>.
+It would have changed from free to bound.) The meaning of <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> is not independent of the names of its free variables, however.
+It surely depends upon the fact (external to this definition) that the symbol <code class="docutils literal notranslate"><span class="pre">abs</span></code> names a procedure for computing the absolute value of a number.
+<code class="docutils literal notranslate"><span class="pre">Good-enough?</span></code> will compute a different function if we substitute <code class="docutils literal notranslate"><span class="pre">cos</span></code> for <code class="docutils literal notranslate"><span class="pre">abs</span></code> in its definition.</p>
+</div>
+<div class="section" id="internal-definitions-and-block-structure">
+<h3>Internal definitions and block structure<a class="headerlink" href="#internal-definitions-and-block-structure" title="Permalink to this headline">¶</a></h3>
+<p>We have one kind of name isolation available to us so far: The formal parameters of a procedure are local to the body of the procedure.
+The square-root program illustrates another way in which we would like to control the use of names.
+<a name="index_term_0610"></a>The existing program consists of separate procedures:</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">sqrt </span><span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">sqrt-iter</span> <span class="mf">1.0</span> <span class="nv">x</span><span class="p">))</span>
+
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">sqrt-iter</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">good-enough?</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+      <span class="nv">guess</span>
+      <span class="p">(</span><span class="nf">sqrt-iter</span> <span class="p">(</span><span class="nf">improve</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span> <span class="nv">x</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">good-enough?</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">&lt; </span><span class="p">(</span><span class="nb">abs </span><span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nf">square</span> <span class="nv">guess</span><span class="p">)</span> <span class="nv">x</span><span class="p">))</span> <span class="mf">0.001</span><span class="p">))</span>
+
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">improve</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">average</span> <span class="nv">guess</span> <span class="p">(</span><span class="nb">/ </span><span class="nv">x</span> <span class="nv">guess</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>The problem with this program is that the only procedure that is important to users of <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> is <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>.
+The other procedures (<code class="docutils literal notranslate"><span class="pre">sqrt-iter</span></code>, <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code>, and <code class="docutils literal notranslate"><span class="pre">improve</span></code>) only clutter up their minds.
+They may not define any other procedure called <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> as part of another program to work together with the square-root program, because <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> needs it.
+The problem is especially severe in the construction of large systems by many separate programmers.
+For example, in the construction of a large library of numerical procedures, many numerical functions are computed as successive approximations and thus might have procedures named <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> and <code class="docutils literal notranslate"><span class="pre">improve</span></code> as auxiliary procedures.
+We would like to localize the subprocedures, hiding them inside <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> so that <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> could coexist with other successive approximations, each having its own private <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code> procedure.
+To make this possible, we allow a procedure to have <a name="index_term_0612"></a><a name="index_term_0614"></a>internal definitions that are local to that procedure.
+For example, in the square-root problem we can write</p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">sqrt </span><span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">good-enough?</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">&lt; </span><span class="p">(</span><span class="nb">abs </span><span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nf">square</span> <span class="nv">guess</span><span class="p">)</span> <span class="nv">x</span><span class="p">))</span> <span class="mf">0.001</span><span class="p">))</span>
+  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">improve</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+    <span class="p">(</span><span class="nf">average</span> <span class="nv">guess</span> <span class="p">(</span><span class="nb">/ </span><span class="nv">x</span> <span class="nv">guess</span><span class="p">)))</span>
+  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">sqrt-iter</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">good-enough?</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+        <span class="nv">guess</span>
+        <span class="p">(</span><span class="nf">sqrt-iter</span> <span class="p">(</span><span class="nf">improve</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span> <span class="nv">x</span><span class="p">)))</span>
+  <span class="p">(</span><span class="nf">sqrt-iter</span> <span class="mf">1.0</span> <span class="nv">x</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Such nesting of definitions, called <em>block structure</em>, is basically the right solution to the simplest name-packaging problem.
+But there is a better idea lurking here.
+In addition to internalizing the definitions of the auxiliary procedures, we can simplify them.
+Since <code class="docutils literal notranslate"><span class="pre">x</span></code> is bound in the definition of <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>, the procedures <code class="docutils literal notranslate"><span class="pre">good-enough?</span></code>, <code class="docutils literal notranslate"><span class="pre">improve</span></code>, and <code class="docutils literal notranslate"><span class="pre">sqrt-iter</span></code>, which are defined internally to <code class="docutils literal notranslate"><span class="pre">sqrt</span></code>, are in the scope of <code class="docutils literal notranslate"><span class="pre">x</span></code>.
+Thus, it is not necessary to pass <code class="docutils literal notranslate"><span class="pre">x</span></code> explicitly to each of these procedures.
+Instead, we allow <code class="docutils literal notranslate"><span class="pre">x</span></code> to be a <a name="index_term_0616"></a><a name="index_term_0618"></a>free variable in the internal definitions, as shown below.
+Then <code class="docutils literal notranslate"><span class="pre">x</span></code> gets its value from the argument with which the enclosing procedure <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> is called.
+This discipline is called <a name="index_term_0620"></a><em>lexical scoping</em>.<a class="footnote-reference brackets" href="#foot-1-1-27" id="id24">24</a></p>
+<div class="highlight-scheme notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">sqrt </span><span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">good-enough?</span> <span class="nv">guess</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">&lt; </span><span class="p">(</span><span class="nb">abs </span><span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nf">square</span> <span class="nv">guess</span><span class="p">)</span> <span class="nv">x</span><span class="p">))</span> <span class="mf">0.001</span><span class="p">))</span>
+  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">improve</span> <span class="nv">guess</span><span class="p">)</span>
+    <span class="p">(</span><span class="nf">average</span> <span class="nv">guess</span> <span class="p">(</span><span class="nb">/ </span><span class="nv">x</span> <span class="nv">guess</span><span class="p">)))</span>
+  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">sqrt-iter</span> <span class="nv">guess</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">good-enough?</span> <span class="nv">guess</span><span class="p">)</span>
+        <span class="nv">guess</span>
+        <span class="p">(</span><span class="nf">sqrt-iter</span> <span class="p">(</span><span class="nf">improve</span> <span class="nv">guess</span><span class="p">))))</span>
+  <span class="p">(</span><span class="nf">sqrt-iter</span> <span class="mf">1.0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>We will use block structure extensively to help us break up large programs into tractable pieces<a class="footnote-reference brackets" href="#foot-1-1-28" id="id25">25</a>.
+The idea of block structure originated with the programming language <a name="index_term_0628"></a>Algol 60.
+It appears in most advanced programming languages and is an important tool for helping to organize the construction of large programs.</p>
+<br><hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="foot-1-1-4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>The characterization of numbers as “simple data” is a barefaced bluff.
+In fact, the treatment of numbers is one of the trickiest and most confusing aspects of any programming language.
+Some typical issues involved are these: <a name="index_term_0136"></a><a name="index_term_0138"></a><a name="index_term_0140"></a>Some computer systems distinguish <em>integers</em>, such as 2, from <em>real numbers</em>, such as 2.71.
+Is the real number 2.00 different from the integer 2? Are the arithmetic operations used for integers the same as the operations used for real numbers? Does 6 divided by 2 produce 3, or 3.0? How large a number can we represent? How many decimal places of accuracy can we represent? Is the range of integers the same as the range of real numbers? <a name="index_term_0142"></a><a name="index_term_0144"></a><a name="index_term_0146"></a>Above and beyond these questions, of course, lies a collection of issues concerning roundoff and truncation errors – the entire science of numerical analysis.
+Since our focus in this book is on large-scale program design rather than on numerical techniques, we are going to ignore these problems.
+The numerical examples in this chapter will exhibit the usual roundoff behavior that one observes when using arithmetic operations that preserve a limited number of decimal places of accuracy in noninteger operations.</p>
+</dd>
+<dt class="label" id="foot-1-1-5"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Throughout this book, <a name="index_term_0152"></a>when we wish to emphasize the distinction between the input typed by the user and the response printed by the interpreter, we will show the latter in slanted characters.</p>
+</dd>
+<dt class="label" id="foot-1-1-6"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p><a name="index_term_0200"></a><a name="index_term_0202"></a>Lisp systems typically provide features to aid the user in formatting expressions.
+Two especially useful features are one that automatically indents to the proper pretty-print position whenever a new line is started and one that highlights the matching left parenthesis whenever a right parenthesis is typed.</p>
+</dd>
+<dt class="label" id="foot-1-1-7"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p><a name="index_term_0208"></a><a name="index_term_0210"></a><a name="index_term_0212"></a><a name="index_term_0214"></a>Lisp obeys the convention that every expression has a value.
+This convention, together with the old reputation of Lisp as an inefficient language, is the source of the quip by Alan Perlis (paraphrasing Oscar Wilde) that “Lisp programmers know the value of everything but the cost of nothing.”</p>
+</dd>
+<dt class="label" id="foot-1-1-8"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p><a name="index_term_0228"></a><a name="index_term_0230"></a>In this book, we do not show the interpreter’s response to evaluating definitions, since this is highly implementation-dependent.</p>
+</dd>
+<dt class="label" id="foot-1-1-9"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>Chapter 3 will show that this notion of environment is crucial, both for understanding how the interpreter works and for implementing interpreters.</p>
+</dd>
+<dt class="label" id="foot-1-1-10"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p>It may seem strange that the evaluation rule says, as part of the first step, that we should evaluate the leftmost element of a combination, since at this point that can only be an operator such as <code class="docutils literal notranslate"><span class="pre">+</span></code> or <code class="docutils literal notranslate"><span class="pre">*</span></code> representing a built-in primitive procedure such as addition or multiplication.
+We will see later that it is useful to be able to work with combinations whose operators are themselves compound expressions.</p>
+</dd>
+<dt class="label" id="foot-1-1-11"><span class="brackets"><a class="fn-backref" href="#id8">8</a></span></dt>
+<dd><p><a name="index_term_0278"></a><a name="index_term_0280"></a><a name="index_term_0282"></a><a name="index_term_0284"></a><a name="index_term_0286"></a><a name="index_term_0288"></a><a name="index_term_0290"></a>Special syntactic forms that are simply convenient alternative surface structures for things that can be written in more uniform ways are sometimes called <em>syntactic sugar</em>, to use a phrase coined by Peter Landin.
+In comparison with users of other languages, Lisp programmers, as a rule, are less concerned with matters of syntax.
+(By contrast, examine any Pascal manual and notice how much of it is devoted to descriptions of syntax.) This disdain for syntax is due partly to the flexibility of Lisp, which makes it easy to change surface syntax, and partly to the observation that many “convenient” syntactic constructs, which make the language less uniform, end up causing more trouble than they are worth when programs become large and complex.
+In the words of Alan Perlis, “Syntactic sugar causes cancer of the semicolon.”</p>
+</dd>
+<dt class="label" id="foot-1-1-12"><span class="brackets"><a class="fn-backref" href="#id9">9</a></span></dt>
+<dd><p>Observe that there are two different operations being combined here: we are creating the procedure, and we are giving it the name <code class="docutils literal notranslate"><span class="pre">square</span></code>.
+It is possible, indeed important, to be able to separate these two notions – to create procedures without naming them, and to give names to procedures that have already been created.
+We will see how to do this in section <a href="chapter_1_section_3.html#%_sec_1.3.2">1.3.2</a>.</p>
+</dd>
+<dt class="label" id="foot-1-1-13"><span class="brackets"><a class="fn-backref" href="#id10">10</a></span></dt>
+<dd><p>Throughout this book, we will <a name="index_term_0314"></a><a name="index_term_0316"></a>describe the general syntax of expressions by using italic symbols delimited by angle brackets – e.g., <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code> – to denote the “slots” in the expression to be filled in when such an expression is actually used.</p>
+</dd>
+<dt class="label" id="foot-1-1-14"><span class="brackets"><a class="fn-backref" href="#id11">11</a></span></dt>
+<dd><p>More <a name="index_term_0326"></a>generally, the body of the procedure can be a sequence of expressions.
+In this case, the interpreter evaluates each expression in the sequence in turn and returns the value of the final expression as the value of the procedure application.</p>
+</dd>
+<dt class="label" id="foot-1-1-15"><span class="brackets"><a class="fn-backref" href="#id12">12</a></span></dt>
+<dd><p>Despite the simplicity of the substitution idea, it turns out to be surprisingly complicated to give a rigorous mathematical definition of the substitution process.
+The problem arises from the possibility of confusion between the names used for the formal parameters of a procedure and the (possibly identical) names used in the expressions to which the procedure may be applied.
+Indeed, there is a long history of erroneous definitions of <em>substitution</em> in the literature of logic and programming semantics.
+<a name="index_term_0338"></a>See Stoy 1977 for a careful discussion of substitution.</p>
+</dd>
+<dt class="label" id="foot-1-1-16"><span class="brackets"><a class="fn-backref" href="#id13">13</a></span></dt>
+<dd><p>In chapter 3 we will introduce <em>stream processing</em>, which is a way of handling apparently “infinite” data structures by incorporating a limited form of normal-order evaluation.
+In section <a href="chapter_4_section_2.html#%_sec_4.2">4.2</a> we will modify the Scheme interpreter to produce a normal-order variant of Scheme.</p>
+</dd>
+<dt class="label" id="foot-1-1-17"><span class="brackets"><a class="fn-backref" href="#id14">14</a></span></dt>
+<dd><p><a name="index_term_0368"></a><a name="index_term_0370"></a><a name="index_term_0372"></a><a name="index_term_0374"></a><a name="index_term_0376"></a><a name="index_term_0378"></a><a name="index_term_0380"></a><a name="index_term_0382"></a>”Interpreted as either true or false” means this: In Scheme, there are two distinguished values that are denoted by the constants <code class="docutils literal notranslate"><span class="pre">#t</span></code> and <code class="docutils literal notranslate"><span class="pre">#f</span></code>.
+When the interpreter checks a predicate’s value, it interprets <code class="docutils literal notranslate"><span class="pre">#f</span></code> as false.
+Any other value is treated as true.
+(Thus, providing <code class="docutils literal notranslate"><span class="pre">#t</span></code> is logically unnecessary, but it is convenient.) In this book we will use names <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>, which are associated with the values <code class="docutils literal notranslate"><span class="pre">#t</span></code> and <code class="docutils literal notranslate"><span class="pre">#f</span></code> respectively.</p>
+</dd>
+<dt class="label" id="foot-1-1-18"><span class="brackets"><a class="fn-backref" href="#id15">15</a></span></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Abs</span></code> also uses <a name="index_term_0410"></a><a name="index_term_0412"></a>the “minus” operator <code class="docutils literal notranslate"><span class="pre">-</span></code>, which, when used with a single operand, as in <code class="docutils literal notranslate"><span class="pre">(-&amp;nbsp;x)</span></code>, indicates negation.</p>
+</dd>
+<dt class="label" id="foot-1-1-19"><span class="brackets"><a class="fn-backref" href="#id16">16</a></span></dt>
+<dd><p>A minor difference <a name="index_term_0440"></a><a name="index_term_0442"></a><a name="index_term_0444"></a>between <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">cond</span></code> is that the <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> part of each <code class="docutils literal notranslate"><span class="pre">cond</span></code> clause may be a sequence of expressions.
+If the corresponding <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> is found to be true, the expressions <code class="docutils literal notranslate"><span class="pre">&lt;e&gt;</span></code> are evaluated in sequence and the value of the final expression in the sequence is returned as the value of the <code class="docutils literal notranslate"><span class="pre">cond</span></code>.
+In an <code class="docutils literal notranslate"><span class="pre">if</span></code> expression, however, the <code class="docutils literal notranslate"><span class="pre">&lt;consequent&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;alternative&gt;</span></code> must be single expressions.</p>
+</dd>
+<dt class="label" id="foot-1-1-20"><span class="brackets"><a class="fn-backref" href="#id17">17</a></span></dt>
+<dd><p>Declarative and imperative descriptions are intimately related, as indeed are mathematics and computer science.
+For instance, to say that the answer produced by a program is <a name="index_term_0500"></a>”correct” is to make a declarative statement about the program.
+There is a large amount of research aimed at establishing techniques for <a name="index_term_0502"></a>proving that programs are correct, and much of the technical difficulty of this subject has to do with negotiating the transition between imperative statements (from which programs are constructed) and declarative statements (which can be used to deduce things).
+In a related vein, an important current area in programming-language design is the exploration of so-called <a name="index_term_0504"></a><a name="index_term_0506"></a>very high-level languages, in which one actually programs in terms of declarative statements.
+The idea is to make interpreters sophisticated enough so that, given “what is” knowledge specified by the programmer, they can generate “how to” knowledge automatically.
+This cannot be done in general, but there are important areas where progress has been made.
+We shall revisit this idea in chapter 4.</p>
+</dd>
+<dt class="label" id="foot-1-1-21"><span class="brackets"><a class="fn-backref" href="#id18">18</a></span></dt>
+<dd><p>This square-root algorithm is actually a special case of Newton’s method, which is a general technique for finding roots of equations.
+The square-root algorithm itself was developed by Heron of <a name="index_term_0512"></a>Alexandria in the first century <font size="-2">A</font>.<font size="-2">D</font>.
+We will see how to express the general Newton’s method as a Lisp procedure in section <a href="chapter_1_section_3.html#%_sec_1.3.4">1.3.4</a>.</p>
+</dd>
+<dt class="label" id="foot-1-1-22"><span class="brackets"><a class="fn-backref" href="#id19">19</a></span></dt>
+<dd><p>We will usually give <a name="index_term_0518"></a><a name="index_term_0520"></a><a name="index_term_0522"></a><a name="index_term_0524"></a>predicates names ending with question marks, to help us remember that they are predicates.
+This is just a stylistic convention.
+As far as the interpreter is concerned, the question mark is just an ordinary character.</p>
+</dd>
+<dt class="label" id="foot-1-1-23"><span class="brackets"><a class="fn-backref" href="#id20">20</a></span></dt>
+<dd><p>Observe that we express our initial guess as 1.0 rather than 1.
+This would not make any difference in many Lisp implementations.
+<a name="index_term_0526"></a><a name="index_term_0528"></a><a name="index_term_0530"></a><a name="index_term_0532"></a><a name="index_term_0534"></a><a name="index_term_0536"></a><a name="index_term_0538"></a><a name="index_term_0540"></a><a name="index_term_0542"></a><a name="index_term_0544"></a><a name="index_term_0546"></a><a name="index_term_0548"></a>MIT Scheme, however, distinguishes between exact integers and decimal values, and dividing two integers produces a rational number rather than a decimal.
+For example, dividing 10 by 6 yields 5/3, while dividing 10.0 by 6.0 yields 1.6666666666666667.
+(We will learn how to implement arithmetic on rational numbers in section <a href="chapter_2_section_1.html#%_sec_2.1.1">2.1.1</a>.) If we start with an initial guess of 1 in our square-root program, and <em>x</em> is an exact integer, all subsequent values produced in the square-root computation will be rational numbers rather than decimals.
+Mixed operations on rational numbers and decimals always yield decimals, so starting with an initial guess of 1.0 forces all subsequent values to be decimals.</p>
+</dd>
+<dt class="label" id="foot-1-1-24"><span class="brackets"><a class="fn-backref" href="#id21">21</a></span></dt>
+<dd><p>Readers who are worried about the efficiency issues involved in using procedure calls to implement iteration should note the remarks on “tail recursion” in section <a href="chapter_1_section_2.html#%_sec_1.2.1">1.2.1</a>.</p>
+</dd>
+<dt class="label" id="foot-1-1-25"><span class="brackets"><a class="fn-backref" href="#id22">22</a></span></dt>
+<dd><p>It is not even clear which of these procedures is a more efficient implementation.
+This depends upon the hardware available.
+There are machines for which the “obvious” implementation is the less efficient one.
+Consider a machine that has extensive tables of logarithms and antilogarithms stored in a very efficient manner.</p>
+</dd>
+<dt class="label" id="foot-1-1-26"><span class="brackets"><a class="fn-backref" href="#id23">23</a></span></dt>
+<dd><p>The concept of consistent renaming is actually subtle and difficult to define formally.
+Famous logicians have made embarrassing errors here.</p>
+</dd>
+<dt class="label" id="foot-1-1-27"><span class="brackets"><a class="fn-backref" href="#id24">24</a></span></dt>
+<dd><p>Lexical scoping dictates that free variables in a procedure are taken to refer to bindings made by enclosing procedure definitions; that is, they are looked up in <a name="index_term_0622"></a>the environment in which the procedure was defined.
+We will see how this works in detail in chapter 3 when we study environments and the detailed behavior of the interpreter.</p>
+</dd>
+<dt class="label" id="foot-1-1-28"><span class="brackets"><a class="fn-backref" href="#id25">25</a></span></dt>
+<dd><p>Embedded definitions <a name="index_term_0626"></a>must come first in a procedure body.
+The management is not responsible for the consequences of running programs that intertwine definition and use.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="chapter_1_intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Building Abstractions with Procedures</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="chapter_1_section_2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.2. </span>Procedures and the Processes They Generate</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Harold Abelson and Gerald Jay Sussman<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

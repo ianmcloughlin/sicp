@@ -1,0 +1,57 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: content/_preamble_01_title.md
+parts:
+  - caption: Preamble
+    numbered: False
+    chapters:
+    - file: content/_preamble_02_license.md
+    - file: content/_preamble_03_ordering.md
+    - file: content/_preamble_04_dedication.md
+    - file: content/_preamble_05_foreword.md
+    - file: content/_preamble_06_preface_second.md
+    - file: content/_preamble_07_preface_first.md
+    - file: content/_preamble_08_acknowledgments.md
+  - caption: Book
+    numbered: 3
+    chapters:
+      - file: content/chapter_1_intro.md
+        sections:
+        - file: content/chapter_1_section_1.md
+        - file: content/chapter_1_section_2.md
+        - file: content/chapter_1_section_3.md
+      - file: content/chapter_2_intro.md
+        sections:
+        - file: content/chapter_2_section_1.md
+        - file: content/chapter_2_section_2.md
+        - file: content/chapter_2_section_3.md
+        - file: content/chapter_2_section_4.md
+        - file: content/chapter_2_section_5.md
+      - file: content/chapter_3_intro.md
+        sections:
+        - file: content/chapter_3_section_1.md
+        - file: content/chapter_3_section_2.md
+        - file: content/chapter_3_section_3.md
+        - file: content/chapter_3_section_4.md
+        - file: content/chapter_3_section_5.md
+      - file: content/chapter_4_intro.md
+        sections:
+        - file: content/chapter_4_section_1.md
+        - file: content/chapter_4_section_2.md
+        - file: content/chapter_4_section_3.md
+        - file: content/chapter_4_section_4.md
+      - file: content/chapter_5_intro.md
+        sections:
+        - file: content/chapter_5_section_1.md
+        - file: content/chapter_5_section_2.md
+        - file: content/chapter_5_section_3.md
+        - file: content/chapter_5_section_4.md
+        - file: content/chapter_5_section_5.md
+  - caption: Postamble
+    numbered: False
+    chapters:
+      - file: content/postamble_01_references.md
+      - file: content/postamble_02_exercises.md
+      - file: content/postamble_03_index.md

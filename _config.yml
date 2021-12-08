@@ -1,0 +1,36 @@
+title: Structure and Interpretation of Computer Programs
+author: Harold Abelson and Gerald Jay Sussman
+logo: img/logo.png
+
+execute:
+  execute_notebooks: force
+
+latex:
+  latex_documents:
+    targetname: sicp.tex
+
+bibtex_bibfiles:
+  - content/references.bib
+
+repository:
+  url: https://github.com/ianmcloughlin/sicp
+  path_to_book: docs
+  branch: main
+
+html:
+  use_issues_button: true
+  use_repository_button: true
+
+parse:
+  myst_enable_extensions:
+    # - amsmath
+    - colon_fence
+    # - deflist
+    - dollarmath
+    # - html_admonition
+    - html_image
+    - linkify
+    # - replacements
+    # - smartquotes
+    - substitution
+    - tasklist
